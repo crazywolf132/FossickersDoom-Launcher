@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?scenebuilder-preview-i18n-resource ../bundle/LabelsBundle_en.properties?>
+
+<!--
+  ~ Copyright 2016 MovingBlocks
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import java.net.URL?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.terasology.launcher.gui.javafx.SettingsController">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TabPane prefHeight="600.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab style="" fx:id="gameTab">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                            prefWidth="200.0">
+                                    <children>
+                                        <GridPane minHeight="0.0" minWidth="0.0" prefHeight="319.0" prefWidth="568.0"
+                                                  AnchorPane.bottomAnchor="-0.5" AnchorPane.leftAnchor="16.0"
+                                                  AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="0.5">
+                                            <children>
+                                                <Label fx:id="maxHeapSizeLabel" GridPane.columnIndex="0"
+                                                       GridPane.rowIndex="4"/>
+                                                <Label fx:id="initialHeapSizeLabel" GridPane.columnIndex="0"
+                                                       GridPane.rowIndex="5"/>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+                                                      spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                    <children>
+                                                        <ComboBox id="maxHeapSize" fx:id="maxHeapSizeBox"
+                                                                  maxWidth="1.7976931348623157E308"
+                                                                  onAction="#updateMaxHeapSizeBox" HBox.hgrow="ALWAYS">
+                                                            <items>
+                                                                <FXCollections fx:factory="observableArrayList">
+                                                                    <String fx:value="Item 1"/>
+                                                                    <String fx:value="Item 2"/>
+                                                                    <String fx:value="Item 3"/>
+                                                                </FXCollections>
+                                                            </items>
+                                                        </ComboBox>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="8.0" right="8.0" fx:id="x1"/>
+                                                    </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+                                                      spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                    <children>
+                                                        <ComboBox id="initialHeapSize" fx:id="initialHeapSizeBox"
+                                                                  maxWidth="1.7976931348623157E308"
+                                                                  onAction="#updateInitialHeapSizeBox"
+                                                                  HBox.hgrow="ALWAYS">
+                                                            <items>
+                                                                <FXCollections fx:factory="observableArrayList">
+                                                                    <String fx:value="Item 1"/>
+                                                                    <String fx:value="Item 2"/>
+                                                                    <String fx:value="Item 3"/>
+                                                                </FXCollections>
+                                                            </items>
+                                                        </ComboBox>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="8.0" right="8.0"/>
+                                                    </padding>
+                                                </HBox>
+                                                <Label fx:id="jobLabel" GridPane.columnIndex="0"
+                                                       GridPane.rowIndex="0"/>
+                                                <Label fx:id="buildVersionLabel" GridPane.columnIndex="0"
+                                                       GridPane.rowIndex="1"/>
+                                                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="404.0"
+                                                      spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                                    <children>
+                                                        <ComboBox fx:id="jobBox" maxWidth="1.7976931348623157E308"
+                                                                  HBox.hgrow="ALWAYS">
+                                                            <items>
+                                                                <FXCollections fx:factory="observableArrayList">
+                                                                    <String fx:value="Item 1"/>
+                                                                    <String fx:value="Item 2"/>
+                                                                    <String fx:value="Item 3"/>
+                                                                </FXCollections>
+                                                            </items>
+                                                        </ComboBox>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="8.0" right="8.0"/>
+                                                    </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+                                                      spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                    <children>
+                                                        <ComboBox fx:id="buildVersionBox"
+                                                                  maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                            <items>
+                                                                <FXCollections fx:factory="observableArrayList">
+                                                                    <String fx:value="Item 1"/>
+                                                                    <String fx:value="Item 2"/>
+                                                                    <String fx:value="Item 3"/>
+                                                                </FXCollections>
+                                                            </items>
+                                                        </ComboBox>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="8.0" right="8.0"/>
+                                                    </padding>
+                                                </HBox>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1"
+                                                      GridPane.rowIndex="2">
+                                                    <children>
+                                                        <Label fx:id="gameDirectoryPath" graphicTextGap="8.0"
+                                                               maxWidth="1.7976931348623157E308" prefHeight="0.0"
+                                                               prefWidth="388.0" styleClass="boxed" text="Label">
+                                                            <VBox.margin>
+                                                                <Insets/>
+                                                            </VBox.margin>
+                                                        </Label>
+                                                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="259.0"
+                                                              spacing="8.0">
+                                                            <children>
+                                                                <Button fx:id="gameDirectoryOpenButton"
+                                                                        maxWidth="1.7976931348623157E308"
+                                                                        mnemonicParsing="false"
+                                                                        onAction="#openGameDirectoryAction"
+                                                                        HBox.hgrow="ALWAYS"/>
+                                                                <Button fx:id="gameDirectoryEditButton"
+                                                                        maxWidth="1.7976931348623157E308"
+                                                                        mnemonicParsing="false"
+                                                                        onAction="#editGameDirectoryAction"
+                                                                        HBox.hgrow="ALWAYS"/>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                    <GridPane.margin>
+                                                        <Insets left="8.0" right="8.0"/>
+                                                    </GridPane.margin>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1"
+                                                      GridPane.margin="$x1" GridPane.rowIndex="3">
+                                                    <children>
+                                                        <Label fx:id="gameDataDirectoryPath"
+                                                               maxWidth="1.7976931348623157E308" prefHeight="0.0"
+                                                               prefWidth="388.0" styleClass="boxed" text="Label"
+                                                               VBox.vgrow="ALWAYS"/>
+                                                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="388.0"
+                                                              spacing="8.0">
+                                                            <children>
+                                                                <Button fx:id="gameDataDirectoryOpenButton"
+                                                                        maxWidth="1.7976931348623157E308"
+                                                                        mnemonicParsing="false"
+                                                                        onAction="#openGameDataDirectoryAction"
+                                                                        HBox.hgrow="ALWAYS"/>
+                                                                <Button fx:id="gameDataDirectoryEditButton"
+                                                                        maxWidth="1.7976931348623157E308"
+                                                                        mnemonicParsing="false"
+                                                                        onAction="#editGameDataDirectoryAction"
+                                                                        HBox.hgrow="ALWAYS"/>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="0"
+                                                      GridPane.rowIndex="2">
+                                                    <children>
+                                                        <Label fx:id="gameDirectoryLabel"
+                                                               alignment="TOP_LEFT"/>
+                                                    </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="0"
+                                                      GridPane.rowIndex="3">
+                                                    <children>
+                                                        <Label fx:id="gameDataDirectoryLabel"/>
+                                                    </children>
+                                                </VBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+                                                      GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                    <children>
+                                                        <TextField fx:id="userJavaParametersField" prefHeight="31.0"
+                                                                   prefWidth="387.0"/>
+                                                    </children>
+                                                </HBox>
+                                                <Label fx:id="javaParametersLabel" GridPane.rowIndex="6"/>
+                                                <Label fx:id="gameParametersLabel" GridPane.rowIndex="7"/>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+                                                      GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                                    <children>
+                                                        <TextField fx:id="userGameParametersField" prefHeight="31.0"
+                                                                   prefWidth="389.0"/>
+                                                    </children>
+                                                </HBox>
+                                                <Label fx:id="logLevelLabel" GridPane.rowIndex="8"/>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+                                                      GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                                    <children>
+                                                        <ComboBox fx:id="logLevelBox" maxWidth="1.7976931348623157E308"
+                                                                  HBox.hgrow="ALWAYS">
+                                                            <items>
+                                                                <FXCollections fx:factory="observableArrayList">
+                                                                    <String fx:value="Item 1"/>
+                                                                    <String fx:value="Item 2"/>
+                                                                    <String fx:value="Item 3"/>
+                                                                </FXCollections>
+                                                            </items>
+                                                        </ComboBox>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="8.0" right="8.0"/>
+                                                    </padding>
+                                                </HBox>
+                                            </children>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity"
+                                                                   minWidth="10.0" prefWidth="256.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="471.0" minWidth="10.0"
+                                                                   prefWidth="376.0"/>
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                            </rowConstraints>
+                                        </GridPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="launcherTab">
+                            <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                            prefWidth="200.0">
+                                    <children>
+                                        <GridPane prefHeight="319.0" prefWidth="568.0" AnchorPane.bottomAnchor="0.0"
+                                                  AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0"
+                                                  AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Label fx:id="chooseLanguageLabel" GridPane.columnIndex="0"
+                                                       GridPane.rowIndex="0"/>
+                                                <Label fx:id="closeLauncherLabel"
+                                                       GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                                                <Label fx:id="saveDownloadedFilesLabel"
+                                                       GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                                                <Label fx:id="launcherDirectoryLabel"
+                                                       GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                                                <Label fx:id="downloadDirectoryLabel"
+                                                       GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+                                                      spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                                    <children>
+                                                        <ComboBox fx:id="languageBox" maxWidth="1.7976931348623157E308"
+                                                                   HBox.hgrow="ALWAYS">
+                                                            <items>
+                                                                <FXCollections fx:factory="observableArrayList">
+                                                                    <String fx:value="Item 1"/>
+                                                                    <String fx:value="Item 2"/>
+                                                                    <String fx:value="Item 3"/>
+                                                                </FXCollections>
+                                                            </items>
+                                                        </ComboBox>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="8.0" right="8.0"/>
+                                                    </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0"
+                                                      spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                    <children>
+                                                        <CheckBox id="closeLauncherBox" fx:id="closeAfterStartBox"
+                                                                  contentDisplay="GRAPHIC_ONLY"
+                                                                  mnemonicParsing="false"/>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="8.0" right="8.0"/>
+                                                    </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0"
+                                                      spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                    <children>
+                                                        <CheckBox fx:id="saveDownloadedFilesBox"
+                                                                  contentDisplay="GRAPHIC_ONLY"
+                                                                  mnemonicParsing="false"/>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="8.0" right="8.0"/>
+                                                    </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0"
+                                                      spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                    <children>
+                                                        <Label fx:id="launcherDirectoryPath"
+                                                               maxWidth="1.7976931348623157E308" styleClass="boxed"
+                                                               text="Label" HBox.hgrow="ALWAYS"/>
+                                                        <Button fx:id="launcherDirectoryOpenButton"
+                                                                maxWidth="-Infinity" minWidth="-Infinity"
+                                                                mnemonicParsing="false"
+                                                                onAction="#openLauncherDirectoryAction"
+                                                                prefWidth="128.0"
+                                                                HBox.hgrow="SOMETIMES"/>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="8.0" right="8.0"/>
+                                                    </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0"
+                                                      spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                    <children>
+                                                        <Label fx:id="downloadDirectoryPath"
+                                                               maxWidth="1.7976931348623157E308"
+                                                               onDragDetected="#openDownloadDirectoryAction"
+                                                               styleClass="boxed" text="Label" HBox.hgrow="ALWAYS"/>
+                                                        <Button fx:id="downloadDirectoryOpenButton"
+                                                                maxWidth="-Infinity" minWidth="-Infinity"
+                                                                mnemonicParsing="false"
+                                                                onAction="#openDownloadDirectoryAction"
+                                                                prefWidth="128.0"
+                                                                HBox.hgrow="SOMETIMES"/>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="8.0" right="8.0"/>
+                                                    </padding>
+                                                </HBox>
+                                                <Label fx:id="searchForUpdatesLabel"
+                                                       GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                                                <CheckBox fx:id="searchForUpdatesBox" contentDisplay="GRAPHIC_ONLY"
+                                                          graphicTextGap="0.0" mnemonicParsing="false"
+                                                          GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                    <GridPane.margin>
+                                                        <Insets left="8.0" right="8.0"/>
+                                                    </GridPane.margin>
+                                                </CheckBox>
+                                            </children>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity"
+                                                                   minWidth="10.0" prefWidth="256.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                            </rowConstraints>
+                                        </GridPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+                <Separator prefWidth="200.0"/>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="692.0" spacing="64.0" VBox.vgrow="NEVER">
+                    <children>
+                        <Button fx:id="saveSettingsButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                onAction="#saveSettingsAction" textAlignment="CENTER" HBox.hgrow="ALWAYS"/>
+                        <Button fx:id="cancelSettingsButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                onAction="#cancelSettingsAction" textAlignment="CENTER"
+                                HBox.hgrow="ALWAYS"/>
+                    </children>
+                    <padding>
+                        <Insets left="32.0" right="32.0"/>
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+    <stylesheets>
+        <URL value="@settings.css"/>
+    </stylesheets>
+</AnchorPane>
